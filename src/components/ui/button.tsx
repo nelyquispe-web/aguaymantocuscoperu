@@ -14,13 +14,22 @@ const buttonVariants = cva(
         outline:
           "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
+        ghost: "hover:bg-secondary hover:text-secondary-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        /* Variantes del sistema de diseño */
+        cta: "bg-accent text-accent-foreground font-semibold shadow-[var(--shadow-accent)] hover:brightness-105 hover:-translate-y-0.5 transition-all duration-300",
+        verde:
+          "bg-gradient-verde text-primary-foreground font-semibold shadow-soft hover:brightness-110 hover:-translate-y-0.5 transition-all duration-300",
+        outlineLight:
+          "border border-primary-foreground/60 bg-transparent text-primary-foreground backdrop-blur-sm hover:bg-primary-foreground/15 transition-colors",
+        outlineVerde:
+          "border border-primary/25 bg-transparent text-primary hover:bg-secondary transition-colors",
       },
       size: {
         default: "h-9 px-4 py-2",
         sm: "h-8 rounded-md px-3 text-xs",
-        lg: "h-10 rounded-md px-8",
+        lg: "h-11 rounded-md px-7 text-[0.95rem]",
+        xl: "h-13 rounded-md px-9 text-base",
         icon: "h-9 w-9",
       },
     },
