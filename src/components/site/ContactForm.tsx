@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -38,6 +39,16 @@ async function enviarConsulta(data: ContactData) {
   console.info("Consulta recibida", data);
 }
 
+function Field({ id, label, error, children }: { id: string; label: string; error?: string; children: ReactNode }) {
+  return (
+    <div className="space-y-1.5">
+      <Label htmlFor={id} className="text-sm font-semibold text-foreground">{label}</Label>
+      {children}
+      {error ? <p className="text-xs text-destructive" role="alert">{error}</p> : null}
+    </div>
+  );
+}
+
 export function ContactForm({ productoInicial = "" }: { productoInicial?: string }) {
   const [enviado, setEnviado] = useState(false);
   const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm<ContactData>({
@@ -62,14 +73,6 @@ export function ContactForm({ productoInicial = "" }: { productoInicial?: string
       </div>
     );
   }
-
-  const Field = ({ id, label, error, children }: { id: string; label: string; error?: string; children: React.ReactNode }) => (
-    <div className="space-y-1.5">
-      <Label htmlFor={id} className="text-sm font-semibold text-foreground">{label}</Label>
-      {children}
-      {error ? <p className="text-xs text-destructive" role="alert">{error}</p> : null}
-    </div>
-  );
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} noValidate className="grid gap-5 rounded-2xl border border-border bg-card p-6 shadow-soft md:grid-cols-2 md:p-9">
