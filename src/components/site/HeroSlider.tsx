@@ -96,15 +96,15 @@ export function HeroSlider() {
             Aguaymanto del Perú
           </span>
           <h1 className="mt-4 text-balance text-4xl leading-[1.08] text-primary-foreground sm:text-5xl lg:text-[3.8rem]">
-            {slides[index].titulo}
+            {slides[index]!.titulo}
           </h1>
-          {slides[index].texto ? (
+          {slides[index]!.texto ? (
             <p className="mt-5 max-w-xl text-base leading-relaxed text-primary-foreground/85 sm:text-lg">
-              {slides[index].texto}
+              {slides[index]!.texto}
             </p>
           ) : null}
           <div className="mt-8 flex flex-wrap gap-3">
-            {slides[index].acciones.map((a) => (
+            {slides[index]!.acciones.map((a) => (
               <Button key={a.label} asChild variant={a.variant} size="xl">
                 <Link to={a.to}>{a.label}</Link>
               </Button>
