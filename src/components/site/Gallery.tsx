@@ -52,13 +52,13 @@ export function Gallery() {
           onClick={() => setOpen(null)}
         >
           <img
-            src={galeria[open].src}
-            alt={galeria[open].alt}
+            src={galeria[open]!.src}
+            alt={galeria[open]!.alt}
             className="max-h-[85vh] max-w-full rounded-lg object-contain shadow-lift"
             onClick={(e) => e.stopPropagation()}
           />
           <p className="absolute bottom-6 inset-x-0 text-center text-sm text-primary-foreground/80">
-            {galeria[open].alt}
+            {galeria[open]!.alt}
           </p>
           <button aria-label="Cerrar" onClick={() => setOpen(null)} className="absolute right-4 top-4 grid size-11 place-items-center rounded-full bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20">
             <X className="size-5" />
