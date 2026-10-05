@@ -39,7 +39,7 @@ async function enviarConsulta(data: ContactData) {
   console.info("Consulta recibida", data);
 }
 
-function Field({ id, label, error, children }: { id: string; label: string; error?: string; children: ReactNode }) {
+function Field({ id, label, error, children }: { id: string; label: string; error?: string | undefined; children: ReactNode }) {
   return (
     <div className="space-y-1.5">
       <Label htmlFor={id} className="text-sm font-semibold text-foreground">{label}</Label>
