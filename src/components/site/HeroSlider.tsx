@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { VideoPromoButton } from "@/components/site/VideoPromoButton";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import heroCampo from "@/assets/hero-campo.jpg";
