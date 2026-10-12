@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { Play, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { videoYouTube } from "@/config/site";
@@ -35,7 +36,7 @@ export function VideoPromoButton({ variante = "claro", etiqueta = "Ver video" }:
         {etiqueta}
       </Button>
 
-      {abierto && (
+      {abierto && createPortal(
         <div
           role="dialog"
           aria-modal="true"
@@ -51,7 +52,7 @@ export function VideoPromoButton({ variante = "claro", etiqueta = "Ver video" }:
             <X className="size-6" aria-hidden="true" />
           </button>
           <div
-            className="relative aspect-video w-full max-w-5xl overflow-hidden rounded-xl bg-black shadow-lift animate-fade-up"
+            className="relative aspect-video w-full max-w-5xl overflow-hidden rounded-xl bg-black shadow-lift"
             onClick={(e) => e.stopPropagation()}
           >
             <iframe
@@ -62,7 +63,8 @@ export function VideoPromoButton({ variante = "claro", etiqueta = "Ver video" }:
               allowFullScreen
             />
           </div>
-        </div>
+        </div>,
+        document.body,
       )}
     </>
   );
