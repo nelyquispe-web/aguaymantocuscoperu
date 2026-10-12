@@ -111,9 +111,9 @@ export function HeroSlider() {
               </Button>
             ))}
           </div>
-          <div className="mt-4">
-            <VideoPromoButton etiqueta="Ver video" />
-          </div>
+        </div>
+        <div className="mt-4 max-w-3xl">
+          <VideoPromoButton etiqueta="Ver video" />
         </div>
       </div>
 
