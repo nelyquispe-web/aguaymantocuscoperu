@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { Play, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { videoYouTube } from "@/config/site";
 
 /**
  * Botón que abre un video de YouTube a pantalla completa.
- * Cambia VIDEO_ID_YOUTUBE en src/config/site.ts para usar otro video.
+ * Cambia el ID en src/config/site.ts para usar otro video.
  */
 export function VideoPromoButton({ variante = "claro", etiqueta = "Ver video" }: { variante?: "claro" | "oscuro"; etiqueta?: string }) {
   const [abierto, setAbierto] = useState(false);
