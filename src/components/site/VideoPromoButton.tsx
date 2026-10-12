@@ -51,14 +51,12 @@ export function VideoPromoButton({ variante = "claro", etiqueta = "Ver video" }:
             <X className="size-6" aria-hidden="true" />
           </button>
           <div
-            className={cn(
-              "relative aspect-video w-full max-w-5xl overflow-hidden rounded-xl bg-black shadow-lift animate-fade-up",
-            )}
+            className="relative aspect-video w-full max-w-5xl overflow-hidden rounded-xl bg-black shadow-lift animate-fade-up"
             onClick={(e) => e.stopPropagation()}
           >
             <iframe
-              src="https://www.youtube-nocookie.com/embed/Q9hFoMARo3A?autoplay=1&rel=0"
-              title="La producción de aguaymanto en Cajamarca, Perú"
+              src={`https://www.youtube-nocookie.com/embed/${videoYouTube.id}?autoplay=1&rel=0`}
+              title={videoYouTube.titulo}
               className="absolute inset-0 size-full"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
