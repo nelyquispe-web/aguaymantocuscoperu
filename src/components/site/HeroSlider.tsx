@@ -91,29 +91,31 @@ export function HeroSlider() {
       ))}
 
       <div className="container-page relative flex h-full items-end pb-24 md:items-center md:pb-0">
-        <div key={index} className="max-w-3xl animate-fade-up">
-          <span className="eyebrow text-accent-soft">
-            <span className="h-px w-8 bg-accent-soft/70" aria-hidden="true" />
-            Aguaymanto del Perú
-          </span>
-          <h1 className="mt-4 text-balance text-4xl leading-[1.08] text-primary-foreground sm:text-5xl lg:text-[3.8rem]">
-            {slides[index]!.titulo}
-          </h1>
-          {slides[index]!.texto ? (
-            <p className="mt-5 max-w-xl text-base leading-relaxed text-primary-foreground/85 sm:text-lg">
-              {slides[index]!.texto}
-            </p>
-          ) : null}
-          <div className="mt-8 flex flex-wrap gap-3">
-            {slides[index]!.acciones.map((a) => (
-              <Button key={a.label} asChild variant={a.variant} size="xl">
-                <Link to={a.to}>{a.label}</Link>
-              </Button>
-            ))}
+        <div className="w-full max-w-3xl">
+          <div key={index} className="animate-fade-up">
+            <span className="eyebrow text-accent-soft">
+              <span className="h-px w-8 bg-accent-soft/70" aria-hidden="true" />
+              Aguaymanto del Perú
+            </span>
+            <h1 className="mt-4 text-balance text-4xl leading-[1.08] text-primary-foreground sm:text-5xl lg:text-[3.8rem]">
+              {slides[index]!.titulo}
+            </h1>
+            {slides[index]!.texto ? (
+              <p className="mt-5 max-w-xl text-base leading-relaxed text-primary-foreground/85 sm:text-lg">
+                {slides[index]!.texto}
+              </p>
+            ) : null}
+            <div className="mt-8 flex flex-wrap gap-3">
+              {slides[index]!.acciones.map((a) => (
+                <Button key={a.label} asChild variant={a.variant} size="xl">
+                  <Link to={a.to}>{a.label}</Link>
+                </Button>
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="mt-4 max-w-3xl">
-          <VideoPromoButton etiqueta="Ver video" />
+          <div className="mt-4">
+            <VideoPromoButton etiqueta="Ver video" />
+          </div>
         </div>
       </div>
 
