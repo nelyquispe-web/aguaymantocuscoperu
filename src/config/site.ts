@@ -26,6 +26,12 @@ export const contacto = {
 export const whatsappMensaje =
   "Hola, estoy interesado en sus productos de aguaymanto y quisiera recibir información.";
 
+/** Video promocional (YouTube). Reemplaza el ID cuando tengas el video propio. */
+export const videoYouTube = {
+  id: "Q9hFoMARo3A",
+  titulo: "La producción de aguaymanto en Cajamarca, Perú",
+};
+
 export function whatsappUrl(mensaje: string = whatsappMensaje) {
   return `https://wa.me/${contacto.whatsapp}?text=${encodeURIComponent(mensaje)}`;
 }
