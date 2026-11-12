@@ -13,14 +13,14 @@ export const site = {
 };
 
 export const contacto = {
-  whatsapp: "51999999999", // [WHATSAPP] solo dígitos, con código de país
-  whatsappVisible: "[WHATSAPP]",
-  telefono: "[TELÉFONO]",
-  telefonoHref: "tel:+51999999999",
-  correo: "[CORREO]",
-  direccion: "[DIRECCIÓN]",
-  ciudad: "[CIUDAD], Perú",
-  horario: "[HORARIO DE ATENCIÓN]",
+  whatsapp: "51954046688",
+  whatsappVisible: "+51 954 046 688",
+  telefono: "+51 920 176 230",
+  telefonoHref: "tel:+51920176230",
+  correo: "comercio@aguaymantoperusauceda.com",
+  direccion: "Comunidad de Sauceda S/N",
+  ciudad: "Limatambo — Anta - Cusco",
+  horario: "Lunes a viernes de 8:00 a. m. a 5:00 p. m.",
 };
 
 export const whatsappMensaje =
