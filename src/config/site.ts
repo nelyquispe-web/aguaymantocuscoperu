@@ -4,7 +4,7 @@
  */
 
 export const site = {
-  nombre: "[NOMBRE DE LA EMPRESA]",
+  nombre: "Aguaymanto Perú",
   nombreCorto: "AGUAYMANTO PERÚ",
   eslogan: "Calidad y compromiso desde el campo peruano.",
   descripcion:
