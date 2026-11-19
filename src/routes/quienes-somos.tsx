@@ -29,7 +29,7 @@ function QuienesSomos() {
       <section id="nuestra-empresa" className="container-page grid items-center gap-14 py-24 lg:grid-cols-2">
         <Reveal><img src={campoAndino} alt="Andenes de cultivo de aguaymanto en la sierra peruana" width={1200} height={912} loading="lazy" className="aspect-4/3 w-full rounded-2xl object-cover shadow-lift" /></Reveal>
         <div>
-          <SectionTitle eyebrow="Nuestra empresa" titulo="Quiénes somos y qué hacemos" />
+          <SectionTitle eyebrow="Nuestra empresa exitosa" titulo="Quiénes somos y qué hacemos" />
           <Reveal delay={100} className="mt-5 space-y-4 leading-relaxed text-muted-foreground">
             <p>Somos una empresa peruana dedicada a la producción, comercialización y venta de aguaymanto. Trabajamos con fruto seleccionado y presentaciones pensadas para distintos tipos de clientes.</p>
             <p>Atendemos a clientes particulares, restaurantes, hoteles, tiendas, distribuidores y compradores mayoristas. Nos diferencia la atención personalizada y el cuidado que ponemos en cada etapa, desde el campo hasta la entrega.</p>
